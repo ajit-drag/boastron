@@ -25,7 +25,8 @@
     "url": "https://github.com/ajit-drag/boastron/issues"
   },
   "dependencies": {
-    "restify": "~4.1.1"
+    "restify": "~4.1.1",
+    "botbuilder": "~3.3.0"
   },
   "devDependencies": {}
 }
