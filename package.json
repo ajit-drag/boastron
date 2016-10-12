@@ -1,0 +1,31 @@
+{
+  "name": "boastron",
+  "version": "1.0.0",
+  "description": "This will be a bot, that will demonstrate the capabilities of bot framework",
+  "main": "server.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ajit-drag/boastron.git"
+  },
+  "keywords": [
+    "bostron",
+    "boasty",
+    "chat-bot"
+  ],
+  "author": "Ajit Singh",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/ajit-drag/boastron/issues"
+  },
+  "dependencies": {
+    "restify": "~4.1.1"
+  },
+  "devDependencies": {}
+}
