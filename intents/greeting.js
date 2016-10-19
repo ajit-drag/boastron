@@ -1,3 +1,3 @@
 module.exports = function(session){
-    console.log(session.message);
+    session.send("Hi "+session.message.user.name+" !");
 }

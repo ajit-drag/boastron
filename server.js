@@ -18,7 +18,7 @@ var intent = new builder.IntentDialog({ recognizers: [recognizer] });
 
 bot.dialog('/', intent);
 
-intent.matches('greeting', builder.DialogAction.send("Hello User !"));
+intent.matches('greeting', function (session) { greeting(session,builder) });
 intent.onDefault(builder.DialogAction.send("I am not saying anything about this !!"));
 
 server.post('/api/messages', chatConnector.listen());
