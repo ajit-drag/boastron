@@ -1,7 +1,8 @@
 var express = require('express');
 var builder = require('botbuilder');
 
-
+/*importing intents */
+var greeting = require('./intents/greeting');
 
 var server = express();
 
@@ -24,5 +25,5 @@ server.post('/api/messages', chatConnector.listen());
 
 server.use('/', express.static('docs'));
 server.listen(process.env.port || process.env.PORT || 3978, function () {
-    console.log('%s listening to %s', server.name, server.url);
+    console.log('Server is listening..');
 });
