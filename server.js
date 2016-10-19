@@ -1,9 +1,9 @@
-var restify = require('restify');
+var express = require('express');
 var builder = require('botbuilder');
 
 
 
-var server = restify.createServer();
+var server = express();
 
 var chatConnector = new builder.ChatConnector({
     appId: process.env.MICROSOFT_APP_ID,
@@ -22,10 +22,7 @@ intent.onDefault(builder.DialogAction.send("I am not saying anything about this 
 
 server.post('/api/messages', chatConnector.listen());
 
-server.get('/', restify.serveStatic({
-    'directory': '.',
-    'default': './docs/index.html'
-}));
+server.use('/', express.static('docs'));
 server.listen(process.env.port || process.env.PORT || 3978, function () {
     console.log('%s listening to %s', server.name, server.url);
 });
