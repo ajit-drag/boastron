@@ -13,6 +13,9 @@ var chatConnector = new builder.ChatConnector({
 
 var bot = new builder.UniversalBot(chatConnector);
 
+bot.dialog('/', function(session) {
+    session.send("Hello");
+});
 bot.dialog('/hello', function(session) {
     session.send("Hello my creator !!");
 });
