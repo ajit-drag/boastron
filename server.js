@@ -13,8 +13,16 @@ var chatConnector = new builder.ChatConnector({
 
 var bot = new builder.UniversalBot(chatConnector);
 
-bot.dialog('/', function(session) {
+bot.dialog('/hello', function(session) {
     session.send("Hello my creator !!");
+});
+
+bot.dialog('/good morning', function(session) {
+    session.send("Good Morning Sir !!");
+});
+
+bot.dialog('/how are you ?', function(session) {
+    session.send("I am fine sir, thanks for asking !!");
 });
 
 server.post('/api/messages', chatConnector.listen());
