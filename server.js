@@ -20,15 +20,8 @@ var intent = new builder.IntentDialog({ recognizers: [recognizer] });
 
 bot.dialog('/', intent);
 
-// intent.matches('greeting', function(session) { greeting(session, builder) });
-// intent.matches('introduction', function(session) { introduction(session, builder) });
-intent.matches('greeting', function(session) {
-    session.send("Hello User !!");
-});
-
-intent.matches('introduction', function(session) {
-    session.send("My Name is Boastron !!");
-});
+intent.matches('greeting', function(session) { greeting(session, builder) });
+intent.matches('introduction', function(session) { introduction(session, builder) });
 intent.onDefault(builder.DialogAction.send("Sorry but sometime I don't know what you want and this is that exact moment !!"));
 
 server.post('/api/messages', chatConnector.listen());
