@@ -1,0 +1,27 @@
+var mongoose = require('mongoose');
+
+var User = require('./models/User');
+
+mongoose.connect('mongodb://ajit:ajit1508@ds139448.mlab.com:39448/boastron');
+mongoose.connection.on('connected', function() {
+    console.log("Connected to database");
+});
+
+var registerUser = function(user, callback) {
+    var newUser = new User({
+        name: user.name,
+        email: user.email,
+        phone: user.phone,
+        channel: user.channel
+    });
+    newUser.save(function(err, addedUser, numberAffected) {
+        console.log(err);
+        if (err) return callback(err, { success: false, result: { message: "Some error occured." } })
+        if (numberAffected === 1) return callback(err, { success: true, result: { message: "Registration successfull." } });
+        else return callback(err, { success: false, result: { message: "Registration failed." } });
+    });
+};
+
+module.exports = {
+    registerUser: registerUser
+};
