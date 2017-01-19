@@ -2,7 +2,10 @@ var mongoose = require('mongoose');
 
 var User = require('./models/User');
 
-mongoose.connect('mongodb://ajit:ajit1508@ds139448.mlab.com:39448/boastron');
+var mlabUsername = process.env.MLAB_USERNAME;
+var mlabPassword = process.env.MLAB_PASSWORD;
+
+mongoose.connect('mongodb://' + mlabUsername + ':' + mlabPassword + '@ds139448.mlab.com:39448/boastron');
 mongoose.connection.on('connected', function() {
     console.log("Connected to database");
 });
