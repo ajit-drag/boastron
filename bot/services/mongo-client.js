@@ -5,6 +5,7 @@ var User = require('./models/User');
 var mlabUsername = process.env.MLAB_USERNAME;
 var mlabPassword = process.env.MLAB_PASSWORD;
 
+console.log(mlabUsername, mlabPassword);
 mongoose.connect('mongodb://' + mlabUsername + ':' + mlabPassword + '@ds139448.mlab.com:39448/boastron');
 mongoose.connection.on('connected', function() {
     console.log("Connected to database");

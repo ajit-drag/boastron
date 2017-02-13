@@ -1,0 +1,76 @@
+Session {
+  domain: null,
+  _events: { error: [Function] },
+  _eventsCount: 1,
+  _maxListeners: undefined,
+  options:
+   { localizerSettings: undefined,
+     autoBatchDelay: 250,
+     library: Library { name: '*', dialogs: [Object], libraries: [Object] },
+     actions: ActionSet { actions: {} },
+     middleware: [ [Function: botbuilder], [Function: botbuilder] ],
+     dialogId: '/',
+     dialogArgs: undefined,
+     dialogErrorMessage: undefined,
+     onSave: [Function: onSave],
+     onSend: [Function: onSend] },
+  msgSent: false,
+  _isReset: false,
+  lastSendTime: 1484762944943,
+  batch: [],
+  batchStarted: true,
+  sendingBatch: false,
+  inMiddleware: true,
+  _locale: 'en',
+  localizer: DefaultLocalizer { botLocalePath: './locale/', _defaultLocale: 'en' },
+  library:
+   Library {
+     name: '*',
+     dialogs: { '/': [Object] },
+     libraries: { BotBuilder: [Object], profile: [Object] } },
+  userData: {},
+  conversationData: {},
+  privateConversationData: {},
+  sessionState:
+   { callstack: [ [Object], [Object] ],
+     lastAccess: 1484762944944,
+     version: 0.1 },
+  message:
+   { type: 'message',
+     timestamp: '2017-01-18T18:09:04.1129081Z',
+     text: 'hi',
+     attachments: [],
+     entities: [],
+     address:
+      { id: '7be9f5ef06a043d980f186eb57b4efbf',
+        channelId: 'emulator',
+        user: [Object],
+        conversation: [Object],
+        bot: [Object],
+        serviceUrl: 'http://localhost:9000',
+        useAuth: true },
+     source: 'emulator',
+     agent: 'botbuilder',
+     user: { id: '44ba1af', name: 'Ajit Singh' } },
+  dialogData: { 'BotBuilder.Data.WaterfallStep': 0 },
+  batchTimer:
+   Timeout {
+     _called: false,
+     _idleTimeout: 250,
+     _idlePrev:
+      TimersList {
+        _idleNext: [Circular],
+        _idlePrev: [Circular],
+        _timer: [Object],
+        _unrefed: false,
+        msecs: 250 },
+     _idleNext:
+      TimersList {
+        _idleNext: [Circular],
+        _idlePrev: [Circular],
+        _timer: [Object],
+        _unrefed: false,
+        msecs: 250 },
+     _idleStart: 6230,
+     _onTimeout: [Function],
+     _repeat: null } }
