@@ -29,7 +29,7 @@ function logResponseBody(req, res, next) {
     next();
 }
 
-app.use(logResponseBody);
+server.use(logResponseBody);
 server.use('/', router);
 server.use('/', express.static('site'));
 
