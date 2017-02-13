@@ -18,7 +18,7 @@ var intent = new builder.IntentDialog({ recognizers: [recognizer] });
 bot.library(require('./dialogs/profile'));
 
 bot.use(builder.Middleware.dialogVersion({ version: 0.1, resetCommand: /^reset/i }));
-bot.use(builder.Middleware.firstRun({ version: 0.1, dialogId: 'profile:/', upgradeDialogId: 'profile:/' }));
+// bot.use(builder.Middleware.firstRun({ version: 0.1, dialogId: 'profile:/', upgradeDialogId: 'profile:/' }));
 
 bot.dialog('/', intent);
 
