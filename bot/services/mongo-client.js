@@ -18,6 +18,7 @@ var registerUser = function(user, callback) {
         phone: user.phone,
         channel: user.channel
     });
+    console.log("User Registration, user:", user);
     newUser.save(function(err, addedUser, numberAffected) {
         console.log(err);
         if (err) return callback(err, { success: false, result: { message: "Some error occured." } })
