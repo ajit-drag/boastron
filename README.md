@@ -1,2 +1,2 @@
 # boastron
-Boastron is a chatbot.
+Boastron is a cool chatbot.
